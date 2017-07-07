@@ -1,0 +1,257 @@
+:root {
+    --dark: #222;
+    --light: #aaa;
+    --p-darkblue: #3c7596;
+    --p-blue: #68b1da;
+    --p-lightblue: #a3deff;
+}
+/* footer always on bottom */
+html {
+    position: relative;
+    min-height: 100%;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container, .wholePost {
+    margin-bottom: 140px;
+}
+
+/* remove heading margins */
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+/* change link styling */
+a {
+    color: var(--p-darkblue);
+    outline: 0;
+    cursor: pointer !important;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none !important;
+}
+a:hover, a:active {
+    color: var(--p-blue);
+}
+
+/* header */
+header {
+    position: relative;
+    height: 20vh;
+    margin-bottom: 10px;
+    background: var(--dark);
+    color: white;
+    border-bottom: 5px solid var(--p-blue);
+    text-align: center;
+}
+header h1 {
+    margin: auto;
+}
+header small {
+    display: block;
+    margin: 5px;
+    font-style: italic;
+}
+#backButton {
+    display: none;
+    position: absolute;
+    margin-left: 2%;
+    font-size: 2.3em;
+}
+
+/* blog - posts */
+.blogPost {
+    margin: 15px 2px;
+    position: relative;
+    padding: 15px;
+}
+.blogPost h3 {
+    margin-right: 60px;
+}
+article .postDate {
+    margin: 3px 0 5px;
+    color: var(--light);
+}
+article .postDescription {
+    text-align: justify;
+    color: var(--dark);
+    font-size: 1.2em;
+}
+.blogPost .readMore {
+    text-align: right;
+    font-size: 1.2em;
+}
+.blogPost .readMore a {
+    padding: 5px 10px;
+}
+@media only screen and (max-width : 768px) {
+    .blogPost {
+        margin: 10px 5px;
+    }
+}
+
+/* whole post page */
+.wholePost {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wholePost article {
+    padding: 20px;
+    margin: 0 auto;
+}
+.wholePost article h2 {
+    margin-right: 60px;
+}
+.wholePost .postDescription {
+    font-weight: bold;
+}
+.wholePost .postDate {
+    font-size: 1.2em;
+}
+.wholePost .postContent {
+    font-size: 1.2em;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: var(--dark);
+    text-align: center;
+}
+footer a {
+    color: var(--light);
+    margin: 5px;
+    font-size: 2em;
+}
+footer img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100px;
+}
+footer p, footer p a{
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: var(--light);
+}
+#linkToPersonalPage {
+    margin: 0;
+}
+#linkToPersonalPage img {
+    max-width: 50px;
+}
+
+/*  login-form */
+#loginForm {
+    margin: 25vh auto;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+#loginForm input {
+    margin: 10px 0;
+}
+#logOut {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 1.4em;
+    transition: color 0.2s ease-in-out;
+}
+#logOut:hover, #logOut:active {
+    color: var(--p-lightblue);
+}
+@media only screen and (max-width : 480px) {
+    #logOut {
+        position: static;
+        margin-right: 20px;
+    }
+}
+
+/* admin - post */
+#postAddEdit {
+    padding: 20px;
+}
+#postAddEdit label {
+    font-size: 1.2em;
+}
+#postAddEdit input, #postAddEdit textarea {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+#postAddEdit .control {
+    text-align: right;
+}
+#postAddEdit .btn {
+    margin-left: 10px;
+    width: 80px;
+}
+.adminControls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.wholePost .adminControls {
+    top: 30px;
+    right: 30px;
+}
+.adminControls span {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.modal-dialog {
+    margin-top: 35vh;
+}
+.modal-header, .modal-footer {
+    border: 0;
+}
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 10;
+    padding: 32px;
+    background-color: var(--p-blue);
+    color: white !important;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0 var(--dark);
+    transition: transform 0.4s ease-in-out;
+}
+.floating-button:hover {
+    transform: rotate(180deg);
+}
+.floating-button span {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+    font-size: 24px;
+}
+.alert {
+    margin: 0;
+    z-index: 10;
+}
+/* helper classes */
+.inline {
+    display: inline-block;
+}
+.center-vertical {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+.no-bullets {
+    list-style-type: none;
+}
+.card {
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0 var(--light);
+}

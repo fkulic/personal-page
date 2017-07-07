@@ -15,6 +15,7 @@ a {
 a:hover, a:active {
     color: var(--p-lightblue);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 section {
     padding-top: 50px;
